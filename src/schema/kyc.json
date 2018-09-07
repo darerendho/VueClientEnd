@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "CoShare Token KYC",
+  "description": "Register your interest into CoShare PreICO",
+  "properties": {
+    "firstname": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80,
+      "title": "First Name",
+      "attrs": {
+        "placeholder": "Joe",
+        "title": "Please enter your first name"
+      }
+    },
+    "lastname": {
+      "type": "string",
+      "maxLength": 120,
+      "title": "Last Name",
+      "attrs": {
+        "placeholder": "Karinsky",
+        "title": "Please enter your last name"
+      }
+    },
+    "address": {
+      "type": "string",
+      "maxLength": 120,
+      "title": "Address",
+      "attrs": {
+        "placeholder": "56 Kingsley Drive",
+        "title": "Please enter your address"
+      }
+    },
+    "country": {
+      "type": "string",
+      "maxLength": 120,
+      "title": "Country",
+      "enum": ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas"
+
+        ,"Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands"
+      
+        ,"Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica"
+      
+        ,"Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea"
+      
+        ,"Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana"
+      
+        ,"Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India"
+      
+        ,"Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia"
+      
+        ,"Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania"
+      
+        ,"Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia"
+      
+        ,"New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal"
+      
+        ,"Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles"
+      
+        ,"Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan"
+      
+        ,"Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia"
+      
+        ,"Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)"
+        
+        ,"Yemen","Zambia","Zimbabwe"],
+      "attrs": {
+        "placeholder": "Your Country",
+        "title": "Please enter your country"
+      }
+    },
+    "dateofbirth": {
+      "type": "string",
+      "title": "DOB",
+    "attrs":{  
+       "type": "pikaday",
+       "label": "Simple datepicker",
+       "placeholder": "User's birth of date",
+       "model": "date",
+       "validator": "validators.date",  
+       "pikadayOptions": {
+        "position": "top left"
+        }
+     } 
+    },
+    "nationality": {
+      "type": "string",
+      "title": "Nationality",
+      "model": "date",
+      "attrs": {
+        "placeholder": "Your Nationality",
+        "title": "Please enter your Nationality"
+      }
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 120,
+      "title": "Email",
+      "attrs": {
+        "type": "email",
+        "placeholder": "Your Email",
+        "title": "Please enter your email"
+      }
+    },
+    "phonenumber": {
+      "type": "string",
+      "maxLength": 20,
+      "title": "Phone Number",
+      "attrs": {
+        "type" : "text",
+        "placeholder": "+65 84752548 "
+      },
+      "validators" : "validators.integer"
+    },
+    "ethaddress": {
+      "type": "string",
+      "maxLength": 20,
+      "title": "ETH Address",
+      "attrs": {
+        "type" : "text"
+      }
+    },
+    "idnumber": {
+      "type": "string",
+      "maxLength": 20,
+      "title": "ID No.",
+      "attrs": {
+        "type" : "text"
+      }
+    },
+    "intention": {
+      "type": "string",
+      "maxLength": 20,
+      "title": "Purchase Intention",
+      "enum" : [
+        "I wish to utilise this coin for the platform in the future." 
+      ]
+    },
+    "agree": {
+      "type": "boolean",
+      "title": "Agree",
+      "description": "You agree to receive occasional updates and special offers for vue-json-schema updates.",
+      "default": false,
+      "attrs": {
+        "type": "checkbox"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["name", "email", "lists"]
+}

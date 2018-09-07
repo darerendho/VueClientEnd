@@ -11,6 +11,7 @@
   import FormSchema from 'vue-json-schema'
   import { Option } from 'element-ui'
 
+
   FormSchema.setComponent('form', 'el-form', ({ vm }) => {
     // vm is the FormSchema VM
 
@@ -47,6 +48,7 @@
   FormSchema.setComponent('switch', 'el-switch')
   FormSchema.setComponent('radio', 'el-radio')
   FormSchema.setComponent('select', 'el-select')
+  FormSchema.setComponent('pikaday','el-pikaday')
 
   // You can also use the component object
   FormSchema.setComponent('option', Option)
@@ -68,7 +70,7 @@
 
   export default {
     data: () => ({
-      schema: require('@/schema/newsletter'),
+      schema: require('@/schema/kyc'),
       model: {}
     }),
     methods: {
